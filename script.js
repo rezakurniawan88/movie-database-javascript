@@ -29,7 +29,7 @@ document.addEventListener('click', async function(e) {
 
 // ---------------------------- getMovie -------------------------------
 function getMovies(keyword) {
-    return fetch('http://www.omdbapi.com/?apikey=1df74443&s=' + keyword)
+    return fetch('https://www.omdbapi.com/?apikey=1df74443&s=' + keyword)
             .then(response => {
                 if( !response.ok ) {
                     throw new Error(response.statusText);
@@ -62,7 +62,7 @@ function updateUI(movies) {
 
 // --------------------------- getDetail --------------------------------
 function getDetailMovie(imdbid) {
-    return fetch('http://www.omdbapi.com/?apikey=1df74443&i=' + imdbid)
+    return fetch('https://www.omdbapi.com/?apikey=1df74443&i=' + imdbid)
             .then(response => response.json())
             .then(m => m);
 }
